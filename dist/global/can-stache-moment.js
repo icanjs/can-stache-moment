@@ -60,8 +60,8 @@
 		orig: global.System
 	};
 })({},window)
-/*src/format*/
-define('can-stache-moment/src/format', [
+/*can-stache-moment@0.0.1#format*/
+define('can-stache-moment/format', [
     'exports',
     'jquery',
     'can',
@@ -80,13 +80,13 @@ define('can-stache-moment/src/format', [
     }
     Object.defineProperty(exports, '__esModule', { value: true });
 });
-/*src/can-stache-moment*/
+/*can-stache-moment@0.0.1#can-stache-moment*/
 define('can-stache-moment', [
     'exports',
     'jquery',
     'can',
     'moment',
-    'can-stache-moment/src/format'
+    'can-stache-moment/format'
 ], function (exports, _jquery, _can, _moment, _format) {
     'use strict';
 });

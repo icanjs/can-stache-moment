@@ -52,6 +52,8 @@ You can globally register a helper by importing the module from the `registerHel
 import 'can-stache-moment/registerHelper/mFormatDate';
 ```
 
+You can register all available helpers globally by importing the file `can-stache-moment/registerHelper/all`.
+
 ### Use in an individual can.Component
 The other way is to import the module's function and use it in an individual module in your app:
 ```js
@@ -78,7 +80,18 @@ can.Component.extend({
     formatDate:mFormatDate
   }
 });
+```
 
+Alternatively, you can import all of the helpers at once, and use them individually in your component (only showing the changed parts from above):
+```
+import momentHelpers from 'can-stache-moment';
+
+can.Component.extend({
+  helpers:{
+    formatDate: helpers.mFormatDate,
+    timeFromNow: helpers.mTimeFromNow
+  }
+});
 ```
 
 ### Formatting Dates with mFormatDate
@@ -86,6 +99,16 @@ can.Component.extend({
 {{mFormatDate key 'String'}}
 {{mFormatDate delivery_date 'MMM D, h:mm a'}}
 ```
+
+### Time From Now
+```
+{{mTimeFromNow boolean}}
+// Examples:
+{{mTimeFromNow}} -> a minute ago
+// boolean is to remove the suffix.
+{{mTimeFromNow}} -> a minute
+```
+
 
 More helpers will be added soon.
 

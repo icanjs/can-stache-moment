@@ -1,3 +1,4 @@
 module.exports = {
-	mFormatDate: require('./mFormatDate')
+	mFormatDate: require('./mFormatDate'),
+	mTimeFromNow: require('./mTimeFromNow')
 };

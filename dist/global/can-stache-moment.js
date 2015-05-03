@@ -60,35 +60,17 @@
 		orig: global.System
 	};
 })({},window)
-/*can-stache-moment@0.0.1#format*/
-define('can-stache-moment/format', [
-    'exports',
-    'jquery',
-    'can',
-    'moment'
-], function (exports, _jquery, _can, _moment) {
-    'use strict';
-    exports.registerHelper = registerHelper;
-    var moment = _moment.moment;
-    function registerHelper() {
-        can.stache.registerHelper('mFormatDate', function (date, format) {
-            console.log(date);
-            console.log(format);
-            var d = moment(date);
-            return d.format(format);
-        });
-    }
-    Object.defineProperty(exports, '__esModule', { value: true });
+/*can-stache-moment@0.0.2#mFormatDate*/
+define('can-stache-moment/mFormatDate', function (require, exports, module) {
+    var moment = require('moment');
+    module.exports = function mFormatDate(date, format) {
+        var d = moment(date());
+        return d.format(format);
+    };
 });
-/*can-stache-moment@0.0.1#can-stache-moment*/
-define('can-stache-moment', [
-    'exports',
-    'jquery',
-    'can',
-    'moment',
-    'can-stache-moment/format'
-], function (exports, _jquery, _can, _moment, _format) {
-    'use strict';
+/*can-stache-moment@0.0.2#can-stache-moment*/
+define('can-stache-moment', function (require, exports, module) {
+    module.exports = { mFormatDate: require('can-stache-moment/mFormatDate') };
 });
 /*[global-shim-end]*/
 (function (){

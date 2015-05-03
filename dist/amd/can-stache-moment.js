@@ -1,10 +1,4 @@
-/*can-stache-moment@0.0.1#can-stache-moment*/
-define([
-    'exports',
-    'jquery',
-    'can',
-    'moment',
-    './format'
-], function (exports, _jquery, _can, _moment, _format) {
-    'use strict';
+/*can-stache-moment@0.0.2#can-stache-moment*/
+define(function (require, exports, module) {
+    module.exports = { mFormatDate: require('./mFormatDate') };
 });

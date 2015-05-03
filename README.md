@@ -1,5 +1,5 @@
 # can-stache-moment
-Moment.js helpers for CanJS Stache templates.
+[Moment.js](http://momentjs.com/) helpers for [CanJS](http://canjs.com/index.html) [Stache](http://canjs.com/docs/can.stache.html) templates.
 
 ## Installation
 ```

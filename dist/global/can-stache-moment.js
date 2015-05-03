@@ -64,23 +64,27 @@
 define('can-stache-moment/mFormatDate', function (require, exports, module) {
     var moment = require('moment');
     module.exports = function mFormatDate(date, format) {
-        var d = moment(date());
-        return d.format(format);
+        var d = new Date(date.isComputed ? date() : date);
+        return moment(d).format(format);
     };
 });
 /*can-stache-moment@0.3.1#mTimeFromNow*/
 define('can-stache-moment/mTimeFromNow', function (require, exports, module) {
     var moment = require('moment');
     module.exports = function mTimeFromNow(date, noSuffix) {
-        var d = moment(date());
-        return d.fromNow(noSuffix);
+        var d = new Date(date.isComputed ? date() : date);
+        return moment(d).fromNow(noSuffix);
     };
 });
 /*can-stache-moment@0.3.1#mCalendar*/
 define('can-stache-moment/mCalendar', function (require, exports, module) {
     var moment = require('moment');
     module.exports = function mCalendar(refDate) {
-        return refDate ? moment().calendar(refDate) : moment().calendar();
+        var d = new Date();
+        if (typeof refDate !== undefined) {
+            d = refDate.isComputed ? new Date(refDate()) : new Date(refDate);
+        }
+        return moment().calendar(d);
     };
 });
 /*can-stache-moment@0.3.1#can-stache-moment*/

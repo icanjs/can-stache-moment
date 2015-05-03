@@ -2,7 +2,7 @@
 define(function (require, exports, module) {
     var moment = require('moment');
     module.exports = function mTimeFromNow(date, noSuffix) {
-        var d = moment(date());
-        return d.fromNow(noSuffix);
+        var d = new Date(date.isComputed ? date() : date);
+        return moment(d).fromNow(noSuffix);
     };
 });

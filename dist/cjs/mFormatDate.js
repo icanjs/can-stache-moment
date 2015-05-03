@@ -1,6 +1,6 @@
 /*can-stache-moment@0.3.1#mFormatDate*/
 var moment = require('moment');
 module.exports = function mFormatDate(date, format) {
-    var d = moment(date());
-    return d.format(format);
+    var d = new Date(date.isComputed ? date() : date);
+    return moment(d).format(format);
 };

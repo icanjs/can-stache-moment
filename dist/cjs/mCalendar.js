@@ -1,5 +1,9 @@
 /*can-stache-moment@0.3.1#mCalendar*/
 var moment = require('moment');
 module.exports = function mCalendar(refDate) {
-    return refDate ? moment().calendar(refDate) : moment().calendar();
+    var d = new Date();
+    if (typeof refDate !== undefined) {
+        d = refDate.isComputed ? new Date(refDate()) : new Date(refDate);
+    }
+    return moment().calendar(d);
 };

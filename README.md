@@ -1,2 +1,2 @@
 # can-stache-moment
-Moment.js helper for CanJS Stache templates.
+Moment.js helpers for CanJS Stache templates.

@@ -3,8 +3,7 @@ import 'can';
 import {moment} from 'moment';
 
 export function mFormatDate(date, format){
-	console.log(date);
-	console.log(format);
-	var d = moment(date);
+	var d = moment(date());
+	console.log(d);
 	return d.format(format);
 }

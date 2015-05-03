@@ -1,0 +1,43 @@
+{
+  "name": "can-stache-moment",
+  "version": "0.0.1",
+  "description": "Moment.js helpers for CanJS Stache templates.",
+  "main": "main",
+  "scripts": {
+    "test": "grunt test --stack",
+    "prepublish": "./node_modules/.bin/grunt build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://marshallswain@github.com/marshallswain/can-stache-moment.git"
+  },
+  "keywords": [
+    "CanJS",
+    "Moment.js",
+    "Stache",
+    "CanJS",
+    "Helper"
+  ],
+  "author": "Marshall Thompson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marshallswain/can-stache-moment/issues"
+  },
+  "homepage": "https://github.com/marshallswain/can-stache-moment",
+  "system": {
+    "main": "src/can-stache-moment",
+    "npmIgnore": "devDependencies",
+    "transpiler": "babel"
+  },
+  "dependencies": {
+    "can": "^2.3.0-pre.0",
+    "jquery": "^2.1.4",
+    "moment": "^2.10.2"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "steal": "^0.10.3",
+    "steal-tools": "^0.10.2"
+  }
+}

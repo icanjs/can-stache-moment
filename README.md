@@ -130,5 +130,5 @@ Pull requests are welcome.  I will add more helpers as I need them.
 
 - [Marshall Thompson](https://github.com/marshallswain)
 
-[![Built with StealJS](./dist/build-with-stealjs.png)](http://StealJS.com)
+[![Built with StealJS](./dist/build-with-stealjs.jpg)](http://StealJS.com)
 

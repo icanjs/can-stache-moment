@@ -60,7 +60,7 @@
 		orig: global.System
 	};
 })({},window)
-/*can-stache-moment@0.2.1#mFormatDate*/
+/*can-stache-moment@0.3.1#mFormatDate*/
 define('can-stache-moment/mFormatDate', function (require, exports, module) {
     var moment = require('moment');
     module.exports = function mFormatDate(date, format) {
@@ -68,7 +68,7 @@ define('can-stache-moment/mFormatDate', function (require, exports, module) {
         return d.format(format);
     };
 });
-/*can-stache-moment@0.2.1#mTimeFromNow*/
+/*can-stache-moment@0.3.1#mTimeFromNow*/
 define('can-stache-moment/mTimeFromNow', function (require, exports, module) {
     var moment = require('moment');
     module.exports = function mTimeFromNow(date, noSuffix) {
@@ -76,14 +76,14 @@ define('can-stache-moment/mTimeFromNow', function (require, exports, module) {
         return d.fromNow(noSuffix);
     };
 });
-/*can-stache-moment@0.2.1#mCalendar*/
+/*can-stache-moment@0.3.1#mCalendar*/
 define('can-stache-moment/mCalendar', function (require, exports, module) {
     var moment = require('moment');
     module.exports = function mCalendar(refDate) {
         return refDate ? moment().calendar(refDate) : moment().calendar();
     };
 });
-/*can-stache-moment@0.2.1#can-stache-moment*/
+/*can-stache-moment@0.3.1#can-stache-moment*/
 define('can-stache-moment', function (require, exports, module) {
     module.exports = {
         mFormatDate: require('can-stache-moment/mFormatDate'),

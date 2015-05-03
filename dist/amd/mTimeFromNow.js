@@ -1,4 +1,4 @@
-/*can-stache-moment@0.2.1#mTimeFromNow*/
+/*can-stache-moment@0.3.1#mTimeFromNow*/
 define(function (require, exports, module) {
     var moment = require('moment');
     module.exports = function mTimeFromNow(date, noSuffix) {

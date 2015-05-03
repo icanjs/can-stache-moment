@@ -52,7 +52,7 @@ You can globally register a helper by importing the module from the `registerHel
 import 'can-stache-moment/registerHelper/mFormatDate';
 ```
 
-You can register all available helpers globally by importing the file `can-stache-moment/registerHelper/all`.
+You can register all available helpers globally by importing the file **`can-stache-moment/registerHelper/all`**.
 
 ### Use in an individual can.Component
 The other way is to import the module's function and use it in an individual module in your app:
@@ -94,24 +94,41 @@ can.Component.extend({
 });
 ```
 
+## API
+
 ### Formatting Dates with mFormatDate
-```
-{{mFormatDate key 'String'}}
-{{mFormatDate delivery_date 'MMM D, h:mm a'}}
-```
+
+    {{mFormatDate key 'String'}}
+  
+    // Example
+    {{mFormatDate delivery_date 'MMM D, h:mm a'}}
+
+See the [Format](http://momentjs.com/docs/#/displaying/format/) MomentJS docs.
 
 ### Time From Now
-```
-{{mTimeFromNow boolean}}
-// Examples:
-{{mTimeFromNow}} -> a minute ago
-// boolean is to remove the suffix.
-{{mTimeFromNow}} -> a minute
-```
 
+    {{mTimeFromNow [boolean]}}
 
-More helpers will be added soon.
+    // Examples:
+    {{mTimeFromNow}} --> a minute ago
+
+    // boolean is to remove the suffix.
+    {{mTimeFromNow true}} --> a minute
+
+See the [Time from Now](http://momentjs.com/docs/#/displaying/fromnow/) MomentJS docs.
+
+### Calendar Time
+
+    {{mCalendar}} --> 
+
+See the [Calendar Time](http://momentjs.com/docs/#/displaying/calendar-time/) docs for example output.
+
+## Contributing
+Pull requests are welcome.  I will add more helpers as I need them.
 
 ## Author
 
 - [Marshall Thompson](https://github.com/marshallswain)
+
+[![Built with StealJS](./dist/build-with-stealjs.png)](http://StealJS.com)
+

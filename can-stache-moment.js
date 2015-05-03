@@ -1,6 +1,3 @@
-import 'jquery';
-import 'can';
-import 'moment';
-
-import './format';
-
+module.exports = {
+	mFormatDate: require('./mFormatDate')
+};

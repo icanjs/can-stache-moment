@@ -1,5 +1,5 @@
-import 'jquery';
-import 'can';
-import {mFormatDate} from '../mFormatDate';
+require('jquery');
+require('can');
+var mFormatDate = require('../mFormatDate');
 
 can.stache.registerHelper('mFormatDate', mFormatDate);

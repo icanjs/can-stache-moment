@@ -1,9 +1,8 @@
-import 'jquery';
-import 'can';
-import {moment} from 'moment';
+var moment = require('moment');
 
-export function mFormatDate(date, format){
+console.log(moment);
+
+module.exports = function mFormatDate(date, format){
 	var d = moment(date());
-	console.log(d);
 	return d.format(format);
-}
+};

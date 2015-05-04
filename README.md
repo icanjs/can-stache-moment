@@ -84,7 +84,7 @@ can.Component.extend({
 
 Alternatively, you can import all of the helpers at once, and use them individually in your component (only showing the changed parts from above):
 ```
-import momentHelpers from 'can-stache-moment';
+import helpers from 'can-stache-moment';
 
 can.Component.extend({
   helpers:{

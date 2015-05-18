@@ -1,0 +1,6 @@
+{
+   "versions": {
+     "latest": "git://github.com/marshallswain/can-stache-moment#master"
+   },
+   "defaultVersion": "latest"
+ }

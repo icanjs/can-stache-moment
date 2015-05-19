@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>src/can-stache-moment.js - can-stache-moment </title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<!--[if lt IE 9]>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
+    <!--<![endif]-->
+</head>
+
+<body class="docs">
+	<header>
+		<nav class="container">
+
+			<div class="logo-menu">
+				<a class="brand" href="./index.html">src/can-stache-moment.js</a>
+			</div>
+
+			<div class="pull-right">
+				<div class="bitovi-menu">
+					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+					<ul class="dropdown-menu">
+						<li><a href="http://bitovi.com">Bitovi.com</a></li>
+						<li><a href="http://bitovi.com/blog/">Blog</a></li>
+						<li><a href="http://bitovi.com/consulting/">Consulting</a></li>
+						<li><a href="http://bitovi.com/training/">Training</a></li>
+						<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+						<li><a href="http://bitovi.com/people/">People</a></li>
+						<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	
+<div class="container api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		
+			<li class="search-container active">
+			<a class="sidebar-title" href="index.html" data-search="src/can-stache-moment.js">
+				src/can-stache-moment.js
+			</a>
+			
+	<ul>
+		
+			
+				
+				
+				<li class="search-container active">
+					<a class="page" href="CanStacheMoment.html" data-search="can-stache-moment">
+						can-stache-moment
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="property" href="exports.html" data-search="exports">
+						exports
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="function" href="mCalendar.html" data-search="mCalendar">
+						mCalendar
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+
+		</li>
+		
+	
+</ul>
+
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>can-stache-moment</h1>
+	<ul class="tags">
+		<li>page</li>
+	</ul>
+	
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+		<span class="module">CanStacheMoment</span>
+	
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<p><a href="http://momentjs.com/">Moment.js</a> helpers for <a href="http://canjs.com/index.html">CanJS</a> <a href="http://canjs.com/docs/can.stache.html">Stache</a> templates.</p>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+		
+
+		
+		<section class="comment">
+			<p><a href="https://nodei.co/npm/can-stache-moment/"><img src="https://nodei.co/npm/can-stache-moment.png?downloads=true&amp;downloadRank=true&amp;stars=true" alt="NPM" /></a></p>
+<h2>Installation</h2>
+<pre><code>npm install can-stache-moment --save
+</code></pre>
+<p>You can use any of the builds in the dist folder to meet your project needs.</p>
+<p>(Recommended) Using CanJS's new support for StealJS, you can now import directly inside your templates.  For example:</p>
+<pre><code class="language-html">&lt;can-import from=&quot;can-stache-moment/registerHelper/mFormatDate&quot;/&gt;
+
+&lt;table class=&quot;table table-hover&quot;&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Date&lt;/th&gt;
+    &lt;th&gt;Customer&lt;/th&gt;
+    &lt;th&gt;Invoice&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+  
+&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<h2>Usage</h2>
+<p>In hopes to help avoid collisions with other helper names that you may already have registered in existing applications, the helpers are all prefixed with 'm'.</p>
+<p><strong>There are two ways to use the included helpers.</strong></p>
+<h3>Register a Helper Globally</h3>
+<p>You can globally register a helper by importing the module from the <code>registerHelper</code> folder.  This is similar to the in-template example above.</p>
+<pre><code>import 'can-stache-moment/registerHelper/mFormatDate';
+</code></pre>
+<p>You can register all available helpers globally by importing the file <strong><code>can-stache-moment/registerHelper/all</code></strong>.</p>
+<h3>Use in an individual can.Component</h3>
+<p>The other way is to import the module's function and use it in an individual module in your app:</p>
+<pre><code class="language-js">// First, import the helper.
+import mFormatDate from 'can-stache-moment/mFormatDate';
+import template from './my-component.stache!';
+import './my-component.less!';
+
+export var MCViewModel = can.Map.extend({
+  // This is the date we'll be using in the template.
+  date_of_purchase: new Date()
+});
+
+can.Component.extend({
+  tag:'my-component',
+  template: template,
+  viewModel:MCViewModel,
+  events:{},
+  // Add it to your can.Component's helpers. You can assign it 
+  // a different name if desired.  The my-component.stache file would
+  // use this syntax to access the helper: 
+  // {{formatDate dateOfPurchase 'M/D/YYYY'}}
+  helpers:{
+    formatDate:mFormatDate
+  }
+});
+</code></pre>
+<p>Alternatively, you can import all of the helpers at once, and use them individually in your component (only showing the changed parts from above):</p>
+<pre><code>import helpers from 'can-stache-moment';
+
+can.Component.extend({
+  helpers:{
+    formatDate: helpers.mFormatDate,
+    timeFromNow: helpers.mTimeFromNow
+  }
+});
+</code></pre>
+<h2>API</h2>
+<h3>Formatting Dates with mFormatDate</h3>
+<pre><code>{{mFormatDate key 'String'}}
+
+// Example
+{{mFormatDate delivery_date 'MMM D, h:mm a'}}
+</code></pre>
+<p>See the <a href="http://momentjs.com/docs/#/displaying/format/">Format</a> MomentJS docs.</p>
+<h3>Time From Now</h3>
+<pre><code>{{mTimeFromNow [boolean]}}
+
+// Examples:
+{{mTimeFromNow}} --&gt; a minute ago
+
+// boolean is to remove the suffix.
+{{mTimeFromNow true}} --&gt; a minute
+</code></pre>
+<p>See the <a href="http://momentjs.com/docs/#/displaying/fromnow/">Time from Now</a> MomentJS docs.</p>
+<h3>Calendar Time</h3>
+<pre><code>{{mCalendar}} --&gt; 
+</code></pre>
+<p>See the <a href="http://momentjs.com/docs/#/displaying/calendar-time/">Calendar Time</a> docs for example output.</p>
+<h2>Contributing</h2>
+<p>Pull requests are welcome.  I will add more helpers as I need them.</p>
+<h2>Author</h2>
+<ul>
+<li><a href="https://github.com/marshallswain">Marshall Thompson</a></li>
+</ul>
+<p><a href="http://StealJS.com"><img src="./dist/build-with-stealjs.jpg" alt="Built with StealJS" /></a></p>
+
+		</section>
+		
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+		<nav class="container">
+			<a class="brand javascriptmvc" href="index.html"></a>
+		</nav>
+	</footer>
+	
+	
+	<script type="text/javascript">
+		var docObject = {"type":"page","name":"CanStacheMoment","src":"_docs/can-stache-moment.md","description":"[Moment.js](http://momentjs.com/) helpers for [CanJS](http://canjs.com/index.html) [Stache](http://canjs.com/docs/can.stache.html) templates.","title":"can-stache-moment","parent":"src/can-stache-moment.js","glob":{"pattern":"{_docs,src}/**/*.{js,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/home/travis/build/marshallswain/can-stache-moment"},"dest":"/home/travis/build/marshallswain/can-stache-moment/docs","generators":["html"],"page":"docs","docConfigDest":"../documentjs.json","project":{}};
+	</script>
+	
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript' 
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

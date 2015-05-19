@@ -1,0 +1,9 @@
+{
+    "sites": {
+        "docs": {
+            "pageConfig": {"page":"docs"},
+            "glob": "{_docs,src}/**/*.{js,md}",
+            "dest":"docs"
+        }
+    }
+}

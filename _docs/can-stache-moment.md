@@ -1,6 +1,5 @@
 @page CanStacheMoment can-stache-moment
 
-# can-stache-moment
 [Moment.js](http://momentjs.com/) helpers for [CanJS](http://canjs.com/index.html) [Stache](http://canjs.com/docs/can.stache.html) templates.
 
 [![NPM](https://nodei.co/npm/can-stache-moment.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/can-stache-moment/)

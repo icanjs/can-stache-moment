@@ -1,9 +1,9 @@
 {
     "sites": {
         "docs": {
-            "parent": "DocumentJS",
             "pageConfig": {"page":"docs"},
-            "glob": "{docs,lib}/**/*.{js,md}, README.md"
+            "glob": "{_docs,src}/**/*.{js,md}",
+            "dest":"docs"
         }
     }
 }

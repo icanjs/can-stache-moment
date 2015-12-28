@@ -35,10 +35,13 @@
 			};
 			args.push(require, module.exports, module);
 		}
-		// Babel uses only the exports objet
+		// Babel uses the exports and module object.
 		else if(!args[0] && deps[0] === "exports") {
 			module = { exports: {} };
 			args[0] = module.exports;
+			if(deps[1] === "module") {
+				args[1] = module;
+			}
 		}
 
 		global.define = origDefine;
@@ -60,7 +63,7 @@
 		orig: global.System
 	};
 })({},window)
-/*can-stache-moment@0.3.3#mFormatDate*/
+/*can-stache-moment@0.3.4#mFormatDate*/
 define('can-stache-moment/mFormatDate', function (require, exports, module) {
     var moment = require('moment');
     module.exports = function mFormatDate(date, format) {
@@ -68,7 +71,7 @@ define('can-stache-moment/mFormatDate', function (require, exports, module) {
         return moment(d).format(format);
     };
 });
-/*can-stache-moment@0.3.3#mTimeFromNow*/
+/*can-stache-moment@0.3.4#mTimeFromNow*/
 define('can-stache-moment/mTimeFromNow', function (require, exports, module) {
     var moment = require('moment');
     module.exports = function mTimeFromNow(date, noSuffix) {
@@ -76,7 +79,7 @@ define('can-stache-moment/mTimeFromNow', function (require, exports, module) {
         return moment(d).fromNow(noSuffix);
     };
 });
-/*can-stache-moment@0.3.3#mCalendar*/
+/*can-stache-moment@0.3.4#mCalendar*/
 define('can-stache-moment/mCalendar', function (require, exports, module) {
     var moment = require('moment');
     module.exports = function mCalendar(refDate) {
@@ -87,7 +90,7 @@ define('can-stache-moment/mCalendar', function (require, exports, module) {
         return moment().calendar(d);
     };
 });
-/*can-stache-moment@0.3.3#can-stache-moment*/
+/*can-stache-moment@0.3.4#can-stache-moment*/
 define('can-stache-moment', function (require, exports, module) {
     module.exports = {
         mFormatDate: require('can-stache-moment/mFormatDate'),

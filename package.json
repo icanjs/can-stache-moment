@@ -1,6 +1,6 @@
 {
   "name": "can-stache-moment",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Moment.js helpers for CanJS Stache templates.",
   "main": "can-stache-moment",
   "scripts": {
@@ -13,10 +13,9 @@
     "url": "https://marshallswain@github.com/marshallswain/can-stache-moment.git"
   },
   "keywords": [
-    "CanJS",
+    "canjs",
     "Moment.js",
-    "Stache",
-    "CanJS",
+    "stache",
     "Helper"
   ],
   "author": "Marshall Thompson",

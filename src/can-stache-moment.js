@@ -1,20 +1,8 @@
 /**
- * Import this file if you want to import all of the helpers at once,
- * but only use them explicitly in a component:
- *
- * ```
- * import momentHelpers from 'can-stache-moment';
- *
- * can.Component.extend({
- * 	 helpers:{
- *     formatDate: helpers.mFormatDate,
- *     timeFromNow: helpers.mTimeFromNow
- *   }
- * });
- * ```
+ * This file loads all helpers globally.
  */
 module.exports = {
-	mFormatDate: require('./mFormatDate'),
-	mTimeFromNow: require('./mTimeFromNow'),
-	mCalendar: require('./mCalendar')
+	mFormatDate: require('./registerHelper/mFormatDate'),
+	mTimeFromNow: require('./registerHelper/mTimeFromNow'),
+	mCalendar: require('./registerHelper/mCalendar')
 };

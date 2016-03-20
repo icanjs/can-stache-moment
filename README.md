@@ -10,11 +10,9 @@
 npm install can-stache-moment --save
 ```
 
-You can use any of the builds in the dist folder to meet your project needs.
-
-(Recommended) Using CanJS's new support for StealJS, you can now import directly inside your templates.  For example:
+(Recommended) Using CanJS's support for StealJS, you can import the helpers directly inside your templates:
 ```html
-<can-import from="can-stache-moment/registerHelper/mFormatDate"/>
+<can-import from="can-stache-moment"/>
 
 <table class="table table-hover">
 <thead>
@@ -74,9 +72,9 @@ can.Component.extend({
   template: template,
   viewModel:MCViewModel,
   events:{},
-  // Add it to your can.Component's helpers. You can assign it 
+  // Add it to your can.Component's helpers. You can assign it
   // a different name if desired.  The my-component.stache file would
-  // use this syntax to access the helper: 
+  // use this syntax to access the helper:
   // \{{formatDate dateOfPurchase 'M/D/YYYY'}}
   helpers:{
     formatDate:mFormatDate
@@ -125,10 +123,14 @@ See the [Time from Now](http://momentjs.com/docs/#/displaying/fromnow/) MomentJS
 ### Calendar Time
 
 ```
-\{{mCalendar}} --> 
+\{{mCalendar}} -->
 ```
 
 See the [Calendar Time](http://momentjs.com/docs/#/displaying/calendar-time/) docs for example output.
+
+## Changelog
+
+- `1.0.0` importing the main file now registers all of the helpers globally.
 
 ## Contributing
 Pull requests are welcome.  I will add more helpers as I need them.
@@ -138,4 +140,3 @@ Pull requests are welcome.  I will add more helpers as I need them.
 - [Marshall Thompson](https://github.com/marshallswain)
 
 [![Built with StealJS](./dist/build-with-stealjs.jpg)](http://StealJS.com)
-

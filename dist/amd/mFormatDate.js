@@ -1,4 +1,4 @@
-/*can-stache-moment@0.3.4#mFormatDate*/
+/*can-stache-moment@1.0.0#mFormatDate*/
 define(function (require, exports, module) {
     var moment = require('moment');
     module.exports = function mFormatDate(date, format) {

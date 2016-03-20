@@ -63,7 +63,7 @@
 		orig: global.System
 	};
 })({},window)
-/*can-stache-moment@0.3.4#mFormatDate*/
+/*can-stache-moment@1.0.0#mFormatDate*/
 define('can-stache-moment/mFormatDate', function (require, exports, module) {
     var moment = require('moment');
     module.exports = function mFormatDate(date, format) {
@@ -71,7 +71,14 @@ define('can-stache-moment/mFormatDate', function (require, exports, module) {
         return moment(d).format(format);
     };
 });
-/*can-stache-moment@0.3.4#mTimeFromNow*/
+/*can-stache-moment@1.0.0#registerHelper/mFormatDate*/
+define('can-stache-moment/registerHelper/mFormatDate', function (require, exports, module) {
+    require('jquery');
+    require('can');
+    var mFormatDate = require('can-stache-moment/mFormatDate');
+    can.stache.registerHelper('mFormatDate', mFormatDate);
+});
+/*can-stache-moment@1.0.0#mTimeFromNow*/
 define('can-stache-moment/mTimeFromNow', function (require, exports, module) {
     var moment = require('moment');
     module.exports = function mTimeFromNow(date, noSuffix) {
@@ -79,7 +86,14 @@ define('can-stache-moment/mTimeFromNow', function (require, exports, module) {
         return moment(d).fromNow(noSuffix);
     };
 });
-/*can-stache-moment@0.3.4#mCalendar*/
+/*can-stache-moment@1.0.0#registerHelper/mTimeFromNow*/
+define('can-stache-moment/registerHelper/mTimeFromNow', function (require, exports, module) {
+    require('jquery');
+    require('can');
+    var mTimeFromNow = require('can-stache-moment/mTimeFromNow');
+    can.stache.registerHelper('mTimeFromNow', mTimeFromNow);
+});
+/*can-stache-moment@1.0.0#mCalendar*/
 define('can-stache-moment/mCalendar', function (require, exports, module) {
     var moment = require('moment');
     module.exports = function mCalendar(refDate) {
@@ -90,12 +104,19 @@ define('can-stache-moment/mCalendar', function (require, exports, module) {
         return moment().calendar(d);
     };
 });
-/*can-stache-moment@0.3.4#can-stache-moment*/
+/*can-stache-moment@1.0.0#registerHelper/mCalendar*/
+define('can-stache-moment/registerHelper/mCalendar', function (require, exports, module) {
+    require('jquery');
+    require('can');
+    var mCalendar = require('can-stache-moment/mCalendar');
+    can.stache.registerHelper('mCalendar', mCalendar);
+});
+/*can-stache-moment@1.0.0#can-stache-moment*/
 define('can-stache-moment', function (require, exports, module) {
     module.exports = {
-        mFormatDate: require('can-stache-moment/mFormatDate'),
-        mTimeFromNow: require('can-stache-moment/mTimeFromNow'),
-        mCalendar: require('can-stache-moment/mCalendar')
+        mFormatDate: require('can-stache-moment/registerHelper/mFormatDate'),
+        mTimeFromNow: require('can-stache-moment/registerHelper/mTimeFromNow'),
+        mCalendar: require('can-stache-moment/registerHelper/mCalendar')
     };
 });
 /*[global-shim-end]*/

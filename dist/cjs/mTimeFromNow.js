@@ -1,4 +1,4 @@
-/*can-stache-moment@0.3.4#mTimeFromNow*/
+/*can-stache-moment@1.0.0#mTimeFromNow*/
 var moment = require('moment');
 module.exports = function mTimeFromNow(date, noSuffix) {
     var d = new Date(date.isComputed ? date() : date);

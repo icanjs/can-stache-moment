@@ -1,6 +1,6 @@
-/*can-stache-moment@0.3.4#can-stache-moment*/
+/*can-stache-moment@1.0.0#can-stache-moment*/
 module.exports = {
-    mFormatDate: require('./mFormatDate.js'),
-    mTimeFromNow: require('./mTimeFromNow.js'),
-    mCalendar: require('./mCalendar.js')
+    mFormatDate: require('./registerHelper/mFormatDate.js'),
+    mTimeFromNow: require('./registerHelper/mTimeFromNow.js'),
+    mCalendar: require('./registerHelper/mCalendar.js')
 };

@@ -26,19 +26,19 @@
   "homepage": "https://github.com/marshallswain/can-stache-moment",
   "system": {
     "main": "can-stache-moment",
-    "npmIgnore": ["documentjs", "devDependencies"],
+    "npmIgnore": ["devDependencies"],
     "transpiler": "babel",
     "directories":{
       "lib":"src"
     }
   },
   "dependencies": {
-    "documentjs": "^0.3.0-pre.1",
     "can": "^2.3.0-pre.0",
     "jquery": "^2.1.4",
     "moment": "^2.10.2"
   },
   "devDependencies": {
+    "documentjs": "^0.3.0-pre.1",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
     "steal": "^0.10.3",

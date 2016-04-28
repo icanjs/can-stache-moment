@@ -1,6 +1,6 @@
 {
   "name": "can-stache-moment",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Moment.js helpers for CanJS Stache templates.",
   "main": "can-stache-moment",
   "scripts": {
@@ -26,10 +26,12 @@
   "homepage": "https://github.com/marshallswain/can-stache-moment",
   "system": {
     "main": "can-stache-moment",
-    "npmIgnore": ["devDependencies"],
+    "npmIgnore": [
+      "devDependencies"
+    ],
     "transpiler": "babel",
-    "directories":{
-      "lib":"src"
+    "directories": {
+      "lib": "src"
     }
   },
   "dependencies": {

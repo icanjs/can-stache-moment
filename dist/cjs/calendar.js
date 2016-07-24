@@ -1,4 +1,4 @@
-/*can-stache-moment@3.0.0#calendar*/
+/*can-stache-moment@3.0.1#calendar*/
 var moment = require('moment');
 module.exports = function mCalendar(refDate) {
     var d = new Date();

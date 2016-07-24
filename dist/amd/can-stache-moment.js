@@ -1,4 +1,4 @@
-/*can-stache-moment@3.0.0#can-stache-moment*/
+/*can-stache-moment@3.0.1#can-stache-moment*/
 define([
     'exports',
     'can-stache',
@@ -14,7 +14,7 @@ define([
     var calendar = _interopRequire(_calendar);
     var formatDate = _interopRequire(_formatDate);
     var timeFromNow = _interopRequire(_timeFromNow);
-    stache.registerHelper('mCalendar', mCalendar);
-    stache.registerHelper('mFormatDate', mFormatDate);
-    stache.registerHelper('mTimeFromNow', mTimeFromNow);
+    stache.registerHelper('mCalendar', calendar);
+    stache.registerHelper('mFormatDate', formatDate);
+    stache.registerHelper('mTimeFromNow', timeFromNow);
 });

@@ -42,23 +42,23 @@ npm install can-stache-moment --save
 
 ## Usage
 
-In hopes to help avoid collisions with other helper names that you may already have registered in existing applications, the helpers are all prefixed with 'm'.
+To help avoid collisions with other helpers, these helpers are all prefixed with 'm'.
 
 **There are two ways to use the included helpers.**
 
-### Register a Helper Globally
-You can globally register a helper by importing the module from the `registerHelper` folder.  This is similar to the in-template example above.
+### Register all Helpers Globally
+Register all helpers by simply importing the library with can-import.
 ```
-import 'can-stache-moment/registerHelper/mFormatDate';
+import 'can-stache-moment';
 ```
 
-You can register all available helpers globally by importing the file **`can-stache-moment/registerHelper/all`**.
-
-### Use in an individual can.Component
+### Use individually in can-component
 The other way is to import the module's function and use it in an individual module in your app:
 ```js
 // First, import the helper.
-import mFormatDate from 'can-stache-moment/mFormatDate';
+import mFormatDate from 'can-stache-moment/format-date';
+import mCalendar from 'can-stache-moment/format-date';
+import mTimeFromNow from 'can-stache-moment/format-date';
 import template from './my-component.stache!';
 import './my-component.less!';
 
@@ -67,29 +67,19 @@ export var MCViewModel = can.Map.extend({
   date_of_purchase: new Date()
 });
 
-can.Component.extend({
+Component.extend({
   tag:'my-component',
   template: template,
   viewModel:MCViewModel,
   events:{},
-  // Add it to your can.Component's helpers. You can assign it
+  // Add it to your Component's helpers. You can assign it
   // a different name if desired.  The my-component.stache file would
   // use this syntax to access the helper:
-  // \{{formatDate dateOfPurchase 'M/D/YYYY'}}
+  // \{{mFormatDate dateOfPurchase 'M/D/YYYY'}}
   helpers:{
-    formatDate:mFormatDate
-  }
-});
-```
-
-Alternatively, you can import all of the helpers at once, and use them individually in your component (only showing the changed parts from above):
-```
-import helpers from 'can-stache-moment';
-
-can.Component.extend({
-  helpers:{
-    formatDate: helpers.mFormatDate,
-    timeFromNow: helpers.mTimeFromNow
+    formatDate,
+    mCalendar,
+    mTimeFromNow
   }
 });
 ```
@@ -130,6 +120,7 @@ See the [Calendar Time](http://momentjs.com/docs/#/displaying/calendar-time/) do
 
 ## Changelog
 
+- `3.0.0` Added compatibility with CanJS 3.0
 - `1.0.0` importing the main file now registers all of the helpers globally.
 
 ## Contributing

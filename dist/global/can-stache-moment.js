@@ -63,38 +63,8 @@
 		orig: global.System
 	};
 })({},window)
-/*can-stache-moment@1.0.0#mFormatDate*/
-define('can-stache-moment/mFormatDate', function (require, exports, module) {
-    var moment = require('moment');
-    module.exports = function mFormatDate(date, format) {
-        var d = new Date(date.isComputed ? date() : date);
-        return moment(d).format(format);
-    };
-});
-/*can-stache-moment@1.0.0#registerHelper/mFormatDate*/
-define('can-stache-moment/registerHelper/mFormatDate', function (require, exports, module) {
-    require('jquery');
-    require('can');
-    var mFormatDate = require('can-stache-moment/mFormatDate');
-    can.stache.registerHelper('mFormatDate', mFormatDate);
-});
-/*can-stache-moment@1.0.0#mTimeFromNow*/
-define('can-stache-moment/mTimeFromNow', function (require, exports, module) {
-    var moment = require('moment');
-    module.exports = function mTimeFromNow(date, noSuffix) {
-        var d = new Date(date.isComputed ? date() : date);
-        return moment(d).fromNow(noSuffix);
-    };
-});
-/*can-stache-moment@1.0.0#registerHelper/mTimeFromNow*/
-define('can-stache-moment/registerHelper/mTimeFromNow', function (require, exports, module) {
-    require('jquery');
-    require('can');
-    var mTimeFromNow = require('can-stache-moment/mTimeFromNow');
-    can.stache.registerHelper('mTimeFromNow', mTimeFromNow);
-});
-/*can-stache-moment@1.0.0#mCalendar*/
-define('can-stache-moment/mCalendar', function (require, exports, module) {
+/*can-stache-moment@3.0.0#calendar*/
+define('can-stache-moment/calendar', function (require, exports, module) {
     var moment = require('moment');
     module.exports = function mCalendar(refDate) {
         var d = new Date();
@@ -104,20 +74,41 @@ define('can-stache-moment/mCalendar', function (require, exports, module) {
         return moment().calendar(d);
     };
 });
-/*can-stache-moment@1.0.0#registerHelper/mCalendar*/
-define('can-stache-moment/registerHelper/mCalendar', function (require, exports, module) {
-    require('jquery');
-    require('can');
-    var mCalendar = require('can-stache-moment/mCalendar');
-    can.stache.registerHelper('mCalendar', mCalendar);
-});
-/*can-stache-moment@1.0.0#can-stache-moment*/
-define('can-stache-moment', function (require, exports, module) {
-    module.exports = {
-        mFormatDate: require('can-stache-moment/registerHelper/mFormatDate'),
-        mTimeFromNow: require('can-stache-moment/registerHelper/mTimeFromNow'),
-        mCalendar: require('can-stache-moment/registerHelper/mCalendar')
+/*can-stache-moment@3.0.0#format-date*/
+define('can-stache-moment/format-date', function (require, exports, module) {
+    var moment = require('moment');
+    module.exports = function mFormatDate(date, format) {
+        var d = new Date(date.isComputed ? date() : date);
+        return moment(d).format(format);
     };
+});
+/*can-stache-moment@3.0.0#time-from-now*/
+define('can-stache-moment/time-from-now', function (require, exports, module) {
+    var moment = require('moment');
+    module.exports = function mTimeFromNow(date, noSuffix) {
+        var d = new Date(date.isComputed ? date() : date);
+        return moment(d).fromNow(noSuffix);
+    };
+});
+/*can-stache-moment@3.0.0#can-stache-moment*/
+define('can-stache-moment', [
+    'exports',
+    'can-stache',
+    'can-stache-moment/calendar',
+    'can-stache-moment/format-date',
+    'can-stache-moment/time-from-now'
+], function (exports, _canStache, _calendar, _formatDate, _timeFromNow) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var stache = _interopRequire(_canStache);
+    var calendar = _interopRequire(_calendar);
+    var formatDate = _interopRequire(_formatDate);
+    var timeFromNow = _interopRequire(_timeFromNow);
+    stache.registerHelper('mCalendar', mCalendar);
+    stache.registerHelper('mFormatDate', mFormatDate);
+    stache.registerHelper('mTimeFromNow', mTimeFromNow);
 });
 /*[global-shim-end]*/
 (function (){
